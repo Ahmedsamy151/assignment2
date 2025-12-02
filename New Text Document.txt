@@ -1,0 +1,49 @@
+2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples
+
+Hoisting means that JavaScript moves declarations to the top of their scope during the compilation phase.
+But only the declarations, NOT the initializations.
+example:>
+console.log(a); 
+var a = 10;
+let and const are also hoisted but diffrently
+They are hoisted without initialization, meaning they cannot be accessed before their declaration.
+This leads us to the Temporal Dead Zone (TDZ).
+TDZ is the period between entering a scope and the actual declaration of a let or const variable.
+During this time, accessing the variable results in a ReferenceError
+ example:>
+console.log(b); 
+let b = 20;
+ReferenceError (TDZ)
+
+3. What are the main differences between == and ===? 
+(==)--> It checks if it's same value.
+(===)--> It checks if it's  the data type and the same value.
+
+5. What’s the difference between type conversion and coercion? Provide examples of each
+
+type Conversion is : This is when you intentionally convert a value from one type to another.
+You do it manually using functions or operators
+
+example:>
+let str = "123";
+let num = Number(str);
+
+console.log(num);
+console.log(typeof num); 
+
+Type Coercion:This happens automatically when JavaScript converts one type into another behind the scenes, usually during operations
+
+example:>
+console.log("5" + 2); 
+
+
+
+
+
+
+
+
+
+
+
+
